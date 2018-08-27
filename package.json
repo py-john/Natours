@@ -1,0 +1,23 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Example website to practice CSS. For Jonas Schmedtmann's Advanced CSS and Sass course on Udemy.",
+  "main": "app.js",
+  "scripts": {
+      "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/py-john/Natours.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/py-john/Natours/issues"
+  },
+  "homepage": "https://github.com/py-john/Natours#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.3"
+  }
+}
