@@ -7,8 +7,8 @@
         border-radius: 2px;
         position: absolute;
         z-index: 10;
-        trasition: all .2s;
-        outline-offset: 2rem;
+        transition: all .5s;
+        outline-offset: .6rem;
 
         &--p1 {
             left: 0;
@@ -26,7 +26,7 @@
         }
 
         &:hover {
-            outline: 1.5rem solid $color-primary;
+            outline: .3rem solid $color-primary;
             transform: scale(1.05) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
             z-index: 20;
