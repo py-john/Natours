@@ -15,11 +15,18 @@
     &__logo-box {
         position: absolute;
         top: 4rem;
-        left: 4rem; 
+        left: 4rem;
     }
 
     &__logo {
         height: 3.5rem;
+        transition: all .3s;
+
+        &:hover {
+            transform: scale(1.1);
+            filter: blur(1px) brightness(90%);
+            opacity: .8;
+        }
     }
 
     &__text-box {
