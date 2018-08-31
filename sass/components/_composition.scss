@@ -7,35 +7,70 @@
         border-radius: 2px;
         position: absolute;
         z-index: 10;
-        transition: all .5s;
+        transition: all .3s;
         outline-offset: .6rem;
+
+        @include respond(tab-port) {
+            float: left;
+            position: relative;
+            width: 33.333%;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
+        }
+
 
         &--p1 {
             left: 0;
             top: -2rem;
+
+            @include respond(tab-port) {
+                top: 2rem;
+                transform: scale(1.2);
+            }
         }
 
         &--p2 {
             right: 0;
             top: 2rem;
+
+            @include respond(tab-port) {
+                top: 3rem;
+                left: 30%;
+                transform: scale(1.15);
+            }
         }
 
         &--p3 {
             left: 20%;
             top: 10rem;
+
+            @include respond(tab-port) {
+                top: 0;
+                left: -33%;
+                z-index: 15;
+                transform: scale(1.27);
+            }
         }
 
         &:hover {
             outline: .3rem solid $color-primary;
-            transform: scale(1.05) translateY(-.5rem);
+            transform: scale(1.15) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
             z-index: 20;
+
+            @include respond(tab-port) {
+                transform: scale(1.35) translateY(-.8rem);
+            }
+
         }
 
     }
 
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
+
+        @include respond(tab-port) {
+            transform: scale(1.05);
+        }
     }
 
 }

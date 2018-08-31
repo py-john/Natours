@@ -14,7 +14,7 @@
     &__content {
         @include absCenter;
 
-        width: 75%;
+        width: 80%;
         border-radius: 3px;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         background-color: $color-grey-light-1;
@@ -24,9 +24,32 @@
         transform: translate(-50%, -50%) scale(.25);
         transition: all .4s .2s;
 
+        @include respond(tab-land) {
+            width: 96%;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        @include respond(phone) {
+            display: block;
+            position: relative;
+            width: 80%;
+        }
+
         &--left {
             width: 33.333%;
             display: table-cell;
+
+            @include respond(tab-port) {
+                vertical-align: middle;
+            }
+
+            @include respond(phone) {
+                display: block;
+            }
+
         }
 
         &--right {
@@ -34,6 +57,10 @@
             display: table-cell;
             vertical-align: middle;
             padding: 3rem 5rem;
+
+            @include respond(phone) {
+                padding: 2.5rem 4rem;
+            }
         }
     }
 
@@ -41,6 +68,10 @@
         display: block;
         height: auto;
         width: 101%;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 
     &__text {
